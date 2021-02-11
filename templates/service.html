@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="static/css/service.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+  <title>Service</title>
+  
+</head>
+<body onload="showImage()">
+  
+  <!-- 1. NAVBAR -->
+  <div class="logo text-center">
+    Logo
+  </div>
+  <nav class="sticky-top navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-fluid">
+      
+      <!-- 창이 작아지면 버튼 생김 -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!--  d-flex justify-content-end 을 넣으면 창이 작아졌을 때 안사라짐! -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="main.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="03_community.html">Community</a>
+          </li>
+          <!-- login-modal -->
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div class="choice p-relative">
+  <!-- 음식 사진 -->
+  <div class="food-img p-relative">
+    <img id="Img" alt="네네 양념치킨">
+    <div class="corner d-flex flex-column">
+      <button style="font-family: 'Do Hyeon', sans-serif;" type="button" onclick="showImage()" class="btn btn-dark f-size-15rem mb-1">응 아니야~</button>
+      <a href="#">
+        <button style="font-family: 'Do Hyeon', sans-serif;" type="button" class="btn btn-warning f-size-15rem mb-1">{{ name }}쓰 Pick!</button>
+      </a>
+      
+    </div>
+  </div>
+  <!-- 음식 이름 -->
+  <div id="Text" class="f-bold text-white p-absolute name f-size-4rem"></div>
+  <!-- 응 아니야 and 미정쓰 pick 버튼  -->
+  
+  
+
+</div>
+  
+
+   <!-- modal -->
+   <div class="modal" tabindex="-1" id="loginModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <!-- login form -->
+        <form class="m-3">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Username</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+        </form>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- main js -->
+  <script src="static/js/service.js"></script>
+  <!-- Bootstrap JS -->
+  <scrip src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></scrip>
+</body>
+</html>

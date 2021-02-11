@@ -1,0 +1,10 @@
+.font-dohyeon {
+  font-family: 'Do Hyeon', sans-serif;
+}
+.logo {
+  /* display: inline-block; */
+  width: 100px;
+  margin: 20px auto;
+  font-size: 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

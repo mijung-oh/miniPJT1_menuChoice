@@ -1,0 +1,33 @@
+.font-dohyeon {
+  font-family: 'Do Hyeon', sans-serif;
+}
+.logo {
+  /* display: inline-block; */
+  width: 100px;
+  margin: 20px auto;
+  font-size: 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.intro {
+  position: relative;
+}
+.intro > img{
+  margin-left:  20%;
+  margin-right: 20%;
+  width: 60%;
+  height: 50%;
+}
+.over-img > form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+}
+.over-img > a {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  width: 150px;
+  height: 50px;
