@@ -1,5 +1,5 @@
 var imgArray= new Array();
-imgArray[0]="static/images/굽네양념.jpg";  //사진
+imgArray[0]="static/images/z.jpg";  //사진
 imgArray[1]="static/images/네네양념.jpg"; //사진
 imgArray[2]="static/images/짜장면.jpg";    //사진
 imgArray[3]="static/images/피자알볼로-단호박.jpg";    //사진
