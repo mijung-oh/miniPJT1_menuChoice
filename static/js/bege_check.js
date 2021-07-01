@@ -29,6 +29,7 @@ function view(){
 //다음문제로 가면 작성되어있던 설명 사라짐
 function hidden(){
   document.getElementById("begeText").style.display = "none";
+  document.getElementById("nextButton").style.display = "none";
 }
 // 다 끝나면 실행되는 함수
 function finish(){

@@ -2,6 +2,9 @@
 <html>
 <head>
 	<meta charset="utf-8"/>
+	<!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  
 	<!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a9857e9221eb0015f027a8a7ee17aaad"></script>
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a9857e9221eb0015f027a8a7ee17aaad&libraries=LIBRARY"></script> -->
 	<!-- 스크립트 라이브러리 코드가 한줄만 있어야 실행됨! -->
@@ -14,9 +17,16 @@
 	<div>
 		<form onsubmit="searchPlaces(); return false;">
 				장소를 입력하세요 : <input type="text" id="keyword" size="15"> 
-				<button type="submit">입력완료!</button> 
+				<button type="submit" onclick="store_list()">입력완료!</button> 
 		</form>
 </div>
+	
+	<h1 class="mt-2 ms-2" id="storeList"></h1>
+
+	<ul id="ul">
+		<li id='li'>
+		</li>
+	</ul>
 	<script src="static\js\begeMap.js"></script>
 </body>
 </html>

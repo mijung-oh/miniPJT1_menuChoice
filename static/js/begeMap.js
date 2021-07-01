@@ -9,20 +9,6 @@
 
   // 키워드 검색 맵
   var places = new kakao.maps.services.Places();
-  // 키워드로 장소 검색
-  // searchPlaces();
-
-  function searchPlaces() {
-    //위치+채식으로 검색이 된다.
-    var keyword = document.getElementById('keyword').value + '롯데마트';
-    if (!keyword.replace(/^\s+|\s+$/g, '')) {
-        alert('키워드를 입력해주세요!');
-        return false;
-    }
-
-    // 장소검색 객체를 통해 키워드로 장소검색을 요청합니다
-    places.keywordSearch( keyword, callback); 
-    }
 
   // 위도, 경도가 담길 리스트
   // 변수명을 location으로하니까 무한새로고침 발생,,
@@ -33,6 +19,20 @@
       latlng: new kakao.maps.LatLng(35.192450,126.813498)
     }
   ]
+  
+  // 키워드로 장소 검색
+  function searchPlaces() {
+    //위치+채식으로 검색이 된다.
+    var keyword = document.getElementById('keyword').value + '채식';
+    if (!keyword.replace(/^\s+|\s+$/g, '')) {
+        alert('키워드를 입력해주세요!');
+        return false;
+    }
+
+    // 장소검색 객체를 통해 키워드로 장소검색을 요청합니다
+    places.keywordSearch( keyword, callback); 
+    }
+
   // 검색한 키워드 기준으로 찾은 장소 이름과 x,y값을 loc배열에 넣는다.
   var callback = function(result, status) {
     if (status === kakao.maps.services.Status.OK) {
@@ -63,3 +63,16 @@
       console.log(loc[i].latlng);
     
   }  
+  function store_list(){
+    //지역값 받기.
+    var keyword = document.getElementById('keyword').value;
+    document.getElementById("storeList").innerHTML = keyword+' 주변 채식 가게 목록 '
+
+    var ul = document.getElementById("ul");
+    var li = document.getElementById("li");
+    for(let i=0; i<loc.length; i++){
+      li.appendChild(document.createTextNode(loc[i].title))
+    }
+    ul.appendChild(li)
+
+  }
